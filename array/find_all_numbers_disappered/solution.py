@@ -5,6 +5,8 @@ return an array of all the integers in the range [1, n] that do not appear in nu
 
 
 def findDisappearedNumbers(nums):
+
+    # change all non-repeating number to negative, the duplicated number remains positive
     for i in range(len(nums)):
         index = abs(nums[i]) - 1
         nums[index] = -abs(nums[index])
